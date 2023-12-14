@@ -18,6 +18,7 @@ def index():
     db.users.insert_one(doc)
     # QR 코드를 생성합니다.
     qr = qrcode.QRCode(
+        box_size=2,
         version=1,
         error_correction=qrcode.ERROR_CORRECT_L
     )
